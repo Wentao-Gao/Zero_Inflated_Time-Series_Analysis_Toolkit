@@ -1,0 +1,136 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zero-inflated-timeseries"
+version = "1.0.0"
+description = "A comprehensive toolkit for zero-inflated time series analysis"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Zero-Inflated Research Team", email = "contact@zero-inflated-toolkit.org"},
+]
+maintainers = [
+    {name = "Zero-Inflated Research Team", email = "contact@zero-inflated-toolkit.org"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+keywords = [
+    "time series",
+    "zero inflated", 
+    "machine learning",
+    "deep learning",
+    "forecasting",
+    "statistical modeling",
+    "pytorch",
+    "scikit-learn",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.21.0",
+    "pandas>=1.3.0",
+    "scikit-learn>=1.0.0",
+    "scipy>=1.7.0",
+    "torch>=1.11.0",
+    "torchvision>=0.12.0",
+    "matplotlib>=3.5.0",
+    "statsmodels>=0.13.0",
+    "tqdm>=4.62.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=22.0.0",
+    "flake8>=5.0.0",
+    "mypy>=1.0.0",
+]
+docs = [
+    "sphinx>=5.0.0",
+    "sphinx-rtd-theme>=1.0.0",
+    "myst-parser>=0.18.0",
+]
+viz = [
+    "seaborn>=0.11.0",
+    "plotly>=5.0.0",
+]
+all = [
+    "zero-inflated-timeseries[dev,docs,viz]",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/zero-inflated-comprehensive"
+Documentation = "https://zero-inflated-timeseries.readthedocs.io/"
+Repository = "https://github.com/your-username/zero-inflated-comprehensive.git"
+"Bug Tracker" = "https://github.com/your-username/zero-inflated-comprehensive/issues"
+Changelog = "https://github.com/your-username/zero-inflated-comprehensive/blob/main/CHANGELOG.md"
+
+[project.scripts]
+zi-timeseries = "zero_inflated_comprehensive.cli:main"
+
+[tool.setuptools]
+packages = ["zero_inflated_comprehensive"]
+
+[tool.setuptools.package-data]
+zero_inflated_comprehensive = ["*.txt", "*.md"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | notebooks
+)/
+'''
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers --strict-config"
+testpaths = [
+    "tests",
+]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
