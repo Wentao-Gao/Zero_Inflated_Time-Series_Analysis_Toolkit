@@ -232,6 +232,15 @@ zero_inflated_comprehensive/
 └── docs/                # 文档
 ```
 
+## 📚 文档
+
+- **[English Documentation](docs/en/)** - 完整英文文档
+- **[中文文档](docs/cn/)** - 完整中文文档  
+- **[User Guide](docs/en/USER_GUIDE_EN.md)** - 如何使用自己的数据集（英文）
+- **[API Reference](docs/en/API_REFERENCE_EN.md)** - 完整API文档（英文）
+- **[用户指南](docs/cn/USER_GUIDE.md)** - 如何使用自己的数据集
+- **[API参考](docs/cn/API_REFERENCE.md)** - 完整API文档
+
 ## 📚 详细文档
 
 ### 模型使用指南

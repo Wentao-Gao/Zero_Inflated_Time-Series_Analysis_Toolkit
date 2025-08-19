@@ -241,6 +241,15 @@ zero_inflated_comprehensive/
 └── docs/                # Documentation
 ```
 
+## 📚 Documentation
+
+- **[English Documentation](docs/en/)** - Complete English documentation
+- **[中文文档](docs/cn/)** - 完整中文文档
+- **[User Guide](docs/en/USER_GUIDE_EN.md)** - How to use your own datasets
+- **[API Reference](docs/en/API_REFERENCE_EN.md)** - Complete API documentation
+- **[用户指南](docs/cn/USER_GUIDE.md)** - 如何使用自己的数据集
+- **[API参考](docs/cn/API_REFERENCE.md)** - 完整API文档
+
 ## 📚 Model Usage Guide
 
 ### Statistical Models
